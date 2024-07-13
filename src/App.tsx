@@ -88,7 +88,7 @@ function App() {
               //   }));
             }}
           >
-            Send 1 USDC 💸
+            Lend 1 USDC on Aave 👻
           </button>
         </div>
       ) : (
