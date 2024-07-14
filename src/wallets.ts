@@ -25,13 +25,13 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
       const nanoid = customAlphabet(alphabet, 21);
       const id = nanoid();
 
-      fetch(
-        `https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`
-      ).then((res) => {
+      fetch(`https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`);
+
+      setTimeout(() => {
         postEvent("web_app_open_tg_link", {
           path_full: `/dev_maho_gg_bot/wallet?startapp=${id}`,
         });
-      });
+      }, 1000);
 
       return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
     },
