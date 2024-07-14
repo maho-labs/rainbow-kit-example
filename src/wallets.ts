@@ -27,7 +27,7 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
         `https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`
       ).then((res) => console.log(res));
 
-      return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
+      return `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`;
     },
   },
   desktop: {
@@ -39,7 +39,7 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
         `https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`
       ).then((res) => console.log(res));
 
-      return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
+      return `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`;
     },
   },
   qrCode: {
