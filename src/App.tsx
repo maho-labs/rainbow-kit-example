@@ -1,6 +1,7 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useSendTransaction } from "wagmi";
 import { encodeFunctionData, parseAbi, parseEther } from "viem";
+import { postEvent } from "@telegram-apps/sdk";
 
 function App() {
   const { address } = useAccount();
@@ -71,6 +72,10 @@ function App() {
               const res = await sendTransaction({
                 to: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
                 data: data,
+              });
+
+              postEvent("web_app_open_tg_link", {
+                path_full: "/dev_maho_gg_bot/wallet",
               });
 
               console.log(res);
