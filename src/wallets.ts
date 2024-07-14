@@ -30,7 +30,7 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
       ).then((res) => console.log(res));
 
       postEvent("web_app_open_tg_link", {
-        path_full: `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`,
+        path_full: `dev_maho_gg_bot/wallet?startapp=${id}`,
       });
 
       return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
@@ -46,7 +46,7 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
       ).then((res) => console.log(res));
 
       postEvent("web_app_open_tg_link", {
-        path_full: `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`,
+        path_full: `dev_maho_gg_bot/wallet?startapp=${id}`,
       });
 
       return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
