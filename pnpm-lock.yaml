@@ -11,6 +11,9 @@ dependencies:
   '@tanstack/react-query':
     specifier: ^5.49.2
     version: 5.49.2(react@18.3.1)
+  '@telegram-apps/sdk':
+    specifier: ^1.1.1
+    version: 1.1.1
   nanoid:
     specifier: ^5.0.7
     version: 5.0.7
@@ -3155,6 +3158,10 @@ packages:
     dependencies:
       '@tanstack/query-core': 5.49.1
       react: 18.3.1
+    dev: false
+
+  /@telegram-apps/sdk@1.1.1:
+    resolution: {integrity: sha512-c+dbpbB9fozTGa3Ycb6zMzerAaiaRw603MvEiF2DjvkQfwsq12M3ANz3MVEhA0sdroxFns2vD2DykxcYPC+YHA==}
     dev: false
 
   /@types/babel__core@7.20.5:

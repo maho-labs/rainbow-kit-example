@@ -12,6 +12,12 @@ import { config } from "./wagmi";
 
 const queryClient = new QueryClient();
 
+declare global {
+  interface Window {
+    Telegram: any;
+  }
+}
+
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <WagmiProvider config={config}>

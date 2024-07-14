@@ -1,5 +1,7 @@
 import { Wallet, getWalletConnectConnector } from "@rainbow-me/rainbowkit";
 import { customAlphabet } from "nanoid";
+import { postEvent } from "@telegram-apps/sdk";
+
 export interface MyWalletOptions {
   projectId: string;
 }
@@ -27,7 +29,11 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
         `https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`
       ).then((res) => console.log(res));
 
-      return `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`;
+      postEvent("web_app_open_tg_link", {
+        path_full: `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`,
+      });
+
+      return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
     },
   },
   desktop: {
@@ -39,7 +45,11 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
         `https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`
       ).then((res) => console.log(res));
 
-      return `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`;
+      postEvent("web_app_open_tg_link", {
+        path_full: `https://t.me/dev_maho_gg_bot/wallet?startapp=${id}`,
+      });
+
+      return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
     },
   },
   qrCode: {
