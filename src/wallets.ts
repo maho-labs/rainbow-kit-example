@@ -27,11 +27,11 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
 
       fetch(
         `https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`
-      ).then((res) => console.log(res));
-
-      postEvent("web_app_open_tg_link", {
-        path_full: `/dev_maho_gg_bot/wallet?startapp=${id}`,
-      });
+      ).then((res) =>
+        postEvent("web_app_open_tg_link", {
+          path_full: `/dev_maho_gg_bot/wallet?startapp=${id}`,
+        })
+      );
 
       return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
     },
@@ -43,11 +43,11 @@ export const mahoWallet = ({ projectId }: MyWalletOptions): Wallet => ({
 
       fetch(
         `https://api.maho.gg/post?id=${id}&uri=${encodeURIComponent(uri)}`
-      ).then((res) => console.log(res));
-
-      postEvent("web_app_open_tg_link", {
-        path_full: `/dev_maho_gg_bot/wallet?startapp=${id}`,
-      });
+      ).then((res) =>
+        postEvent("web_app_open_tg_link", {
+          path_full: `/dev_maho_gg_bot/wallet?startapp=${id}`,
+        })
+      );
 
       return `tg://resolve?domain=dev_maho_gg_bot&appname=wallet&startapp=${id}`;
     },
