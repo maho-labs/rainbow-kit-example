@@ -5,6 +5,6 @@ import { mahoWallet } from "./wallets";
 export const config = getDefaultConfig({
   appName: "RainbowKit demo",
   projectId: "0391cfa157960618711b7022ce503434",
-  chains: [arbitrum, base],
+  chains: [base, arbitrum],
   wallets: [{ groupName: "Recommended", wallets: [mahoWallet] }],
 });
